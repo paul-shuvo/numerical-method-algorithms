@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CSE_257_Project_2
+namespace FalsePosition
 {
     class Program
     {
         static void Main(string[] args)
         {    
             Console.WriteLine("No.  Pn-1  Pn-2   f(Pn-1)   f(Pn-2)   Pn    f(Pn)\n");
-            double ans = False_Position(1, 2, .0001, 101);
+            double ans = FalsePosition(1, 2, .0001, 101);
             Console.WriteLine("Answer is {0}", ans);
             Console.ReadKey();
         }
 
-        static double False_Position(double Strt_Intr, double End_intr, double Tol, int Max_Num_It)
+        static double FalsePosition(double Strt_Intr, double End_intr, double Tol, int Max_Num_It)
         {
             
             double start = Strt_Intr;
