@@ -21,9 +21,9 @@ namespace FalsePosition
             double start = Strt_Intr;
             double end = End_intr;
             int counter = 2;
-            double tollerance=10;
+            double tolerance=10;
             double temp = 0, ret = 0;
-            while (tollerance > Tol && counter <= Max_Num_It)
+            while (tolerance > Tol && counter <= Max_Num_It)
             {
                 double Pen;
                 double res_Pen1;
@@ -42,18 +42,18 @@ namespace FalsePosition
                 {
                     start = Pen;
                 }
-                tollerance = temp - Pen;
+                tolerance = temp - Pen;
                 temp = Pen;
-                if (tollerance < 0)
+                if (tolerance < 0)
                 {
-                    tollerance=tollerance* (-1);
+                    tolerance=tolerance* (-1);
                 }
                 
                 ret = Pen;
                 counter++;
                 
             }
-            Console.WriteLine("tol is {0}", tollerance);
+            Console.WriteLine("tol is {0}", tolerance);
             return ret;
         }
     }
